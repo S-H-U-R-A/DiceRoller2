@@ -5,14 +5,17 @@ plugins {
 
 android {
     namespace 'com.example.diceroller'
-    compileSdk 33
+    compileSdk 33 //Versión de android a la cual se compila mediante Gradle
 
     defaultConfig {
         applicationId "com.example.diceroller"
-        minSdk 24
-        targetSdk 33
+        minSdk 24 //Versión más antigua que se admite
+        targetSdk 33 //Versión de Android a la cual apuntamos el desarrollo
         versionCode 1
         versionName "1.0"
+
+        //EN VERSIONES ANTERIORES A ANDROID 21, USA VECTORES EN LUGAR DE IMAGENES PESADAS
+        vectorDrawables.useSupportLibrary = true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -38,6 +41,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
